@@ -139,6 +139,16 @@
   width: 3.5rem;
 }
 
+.info__image-background:hover .info__image {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .info__image-background {
   position: relative;
   width: 25rem;
@@ -180,6 +190,19 @@
   font-size: 2.5rem;
   font-weight: 400;
   white-space: nowrap;
+  animation: flashing 5s infinite ease-in-out;
+}
+
+@keyframes flashing {
+  0% {
+    background-color: var(--graphite);
+  }
+  50% {
+    background-color: var(--nitro-blue);
+  }
+  100% {
+    background-color: var(--graphite);
+  }
 }
 
 .discount__text--code {
