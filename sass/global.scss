@@ -1,0 +1,133 @@
+@use "./partials/colors" as *;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+/* Typography */
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  color: $graphite;
+}
+
+h1,
+h2 {
+  font-size: 3.75rem;
+  font-weight: 300;
+  color: $graphite;
+}
+
+h3 {
+  font-size: 2.0625rem;
+  font-weight: 300;
+  margin: 1.25rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+/* Small reusable components */
+
+.button {
+  z-index: 1;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  max-width: 80%;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.25rem 2.5rem;
+  margin: 1.25rem 0;
+
+  &::after {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid $graphite;
+  }
+
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    top: 5px;
+    left: 5px;
+    background-color: $nitro-blue;
+  }
+
+  &:hover {
+    top: 5px;
+    left: 5px;
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+/* Header */
+
+.header {
+  background-color: $nitro-pink;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding: 0.625rem 1.25rem;
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__title {
+    align-self: flex-start;
+    margin: 1.25rem 0;
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 300;
+    color: $graphite;
+  }
+
+  &__logo {
+    min-width: 3.125rem;
+    max-width: 7.5rem;
+    line-height: 1;
+  }
+}
+
+/* Navigation */
+
+.navigation {
+  &__list {
+    padding: 0;
+    margin-left: 1.25rem;
+    background-color: $nitro-pink;
+    display: flex;
+    list-style: none;
+  }
+
+  &__link {
+    font-weight: 400;
+    text-decoration: none;
+    margin-right: 1.25rem;
+    color: $graphite;
+
+    &--highlighted {
+      color: $nitro-blue;
+    }
+  }
+}

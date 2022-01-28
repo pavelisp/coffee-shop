@@ -1,24 +1,20 @@
 /* Menu Page Header  */
-
 .navigation--menu-page {
   margin-left: auto;
 }
 
 /* Menu Page Hero */
-
 .menu-hero {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-image: url("../assets/images/coffee-circle.jpg");
   background-position: center;
   background-size: cover;
   max-height: 37.5rem;
   min-height: 35.9375rem;
 }
-
 .menu-hero__title {
   z-index: 1;
   position: relative;
@@ -29,18 +25,16 @@
   min-width: 17.5rem;
   height: 12rem;
   line-height: 1;
-  color: var(--white);
+  color: #fff;
 }
-
 .menu-hero__title::before {
   z-index: 2;
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 0.3125rem solid var(--nitro-blue);
+  border: 0.3125rem solid #5bacc3;
 }
-
 .menu-hero__title::after {
   z-index: -1;
   content: "";
@@ -49,65 +43,55 @@
   height: calc(100% + 0.625rem);
   top: 0.625rem;
   left: 0.625rem;
-  background-color: var(--graphite);
+  background-color: #393939;
   background-size: cover;
 }
 
 /* Coffee Menu Navigation */
-
 .coffee-menu-navigation {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   margin: 0;
-
-  background-color: var(--graphite);
+  background-color: #393939;
   min-height: 3.75rem;
 }
-
 .coffee-menu-navigation__link {
   text-decoration: none;
-  color: var(--white);
+  color: #fff;
   font-size: 1.25rem;
   text-transform: uppercase;
   padding: 0 1.25rem;
-  border-left: 4px solid var(--nitro-blue);
+  border-left: 4px solid #5bacc3;
 }
 
 /* Coffee Menu */
-
 .shop-menu__category {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
 .shop-menu__category--dark {
-  background-color: var(--nitro-pink);
+  background-color: #fff0ed;
 }
-
 .shop-menu__category--light {
-  background-color: var(--light-gray);
+  background-color: #f7f7f7;
 }
-
 .shop-menu__category-name {
   margin: 1.25rem;
 }
-
 .shop-menu__item {
   margin: 0 0 0.625rem;
 }
-
 .shop-menu__description {
   width: 50ch;
   line-height: 1.5;
   margin: 0;
   font-style: italic;
 }
-
 .shop-menu__price {
   margin: 0.625rem 0 2.5rem;
-  color: var(--nitro-blue);
+  color: #5bacc3;
 }
